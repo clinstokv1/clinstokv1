@@ -1,104 +1,14 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clinstok | Dashboard</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      height: 100vh;
-      background-color: #f4f6f8;
-    }
-
-    .sidebar {
-      width: 220px;
-      background-color: #2f3e46;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      padding-top: 20px;
-    }
-
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 24px;
-    }
-
-    .menu-item {
-      padding: 15px 25px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .menu-item:hover {
-      background-color: #354f52;
-    }
-
-    .content {
-      flex: 1;
-      padding: 30px;
-    }
-
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background-color: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #888;
-      margin-top: 40px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Clinstok - Controle de Estoque</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Clinstok</h2>
-    <div class="menu-item">🏠 Dashboard</div>
-    <div class="menu-item">📦 Estoque</div>
-    <div class="menu-item">➕ Entradas</div>
-    <div class="menu-item">➖ Saídas</div>
-    <div class="menu-item">👥 Usuários</div>
-    <div class="menu-item">🚪 Sair</div>
-  </div>
+  <h1>Clinstok</h1>
+  <p>Bem-vindo ao sistema de controle de estoque.</p>
 
-  <div class="content">
-    <h1>Bem-vindo ao Clinstok</h1>
-    <div class="card-container">
-      <div class="card">
-        <h3>Total de Produtos</h3>
-        <p>0</p>
-      </div>
-      <div class="card">
-        <h3>Última Entrada</h3>
-        <p>Nenhuma</p>
-      </div>
-      <div class="card">
-        <h3>Última Saída</h3>
-        <p>Nenhuma</p>
-      </div>
-    </div>
-    <div class="footer">
-      Sistema Clinstok © 2025
-    </div>
-  </div>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
